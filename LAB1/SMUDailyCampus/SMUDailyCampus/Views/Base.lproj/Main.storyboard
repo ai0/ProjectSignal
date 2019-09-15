@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" userLabel="News" customClass="NewsViewController" customModule="SMUDailyCampus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uES-sM-957">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="24" minimumInteritemSpacing="24" id="iaz-QZ-kLL">
+                                    <size key="itemSize" width="300" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="36" minY="24" maxX="36" maxY="24"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsItem" id="DsP-HG-620" customClass="NewsCell" customModule="SMUDailyCampus" customModuleProvider="target">
+                                        <rect key="frame" x="57" y="24" width="300" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="at1-pn-Ff0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="FfG-8e-kZp"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eDf-Yv-xdd">
+                                                    <rect key="frame" x="0.0" y="128" width="300" height="122"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-It-NtK">
+                                                            <rect key="frame" x="16" y="0.0" width="276" height="82.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lVq-2C-a1F">
+                                                            <rect key="frame" x="16" y="82.5" width="276" height="14.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZE-gD-yU7">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="138" height="14.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNI-s4-R6b">
+                                                                    <rect key="frame" x="138" y="0.0" width="138" height="14.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Excerpt" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEw-fB-ME6">
+                                                            <rect key="frame" x="16" y="97" width="276" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="16" bottom="8" trailing="8"/>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyE-XU-Jhv">
+                                                    <rect key="frame" x="270" y="0.0" width="30" height="30"/>
+                                                    <state key="normal" image="bookmark"/>
+                                                    <connections>
+                                                        <action selector="addFavorite:" destination="9pv-A4-QxB" eventType="touchUpInside" id="lyq-RE-tgy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="at1-pn-Ff0" secondAttribute="trailing" id="3B4-wm-Eei"/>
+                                            <constraint firstItem="at1-pn-Ff0" firstAttribute="top" secondItem="DsP-HG-620" secondAttribute="top" id="3cj-Wl-bca"/>
+                                            <constraint firstItem="PyE-XU-Jhv" firstAttribute="top" secondItem="DsP-HG-620" secondAttribute="top" id="66N-Fs-7Fl"/>
+                                            <constraint firstItem="eDf-Yv-xdd" firstAttribute="leading" secondItem="at1-pn-Ff0" secondAttribute="leading" id="Qbg-qX-v3m"/>
+                                            <constraint firstItem="eDf-Yv-xdd" firstAttribute="top" secondItem="at1-pn-Ff0" secondAttribute="bottom" id="Ud0-0t-YqK"/>
+                                            <constraint firstItem="eDf-Yv-xdd" firstAttribute="trailing" secondItem="at1-pn-Ff0" secondAttribute="trailing" id="eV9-Af-lBx"/>
+                                            <constraint firstAttribute="bottom" secondItem="eDf-Yv-xdd" secondAttribute="bottom" id="exR-mv-65N"/>
+                                            <constraint firstItem="at1-pn-Ff0" firstAttribute="leading" secondItem="DsP-HG-620" secondAttribute="leading" id="f2D-Hh-NOd"/>
+                                            <constraint firstAttribute="trailing" secondItem="PyE-XU-Jhv" secondAttribute="trailing" id="m66-32-GN4"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="author" destination="4ZE-gD-yU7" id="bcm-5O-gM9"/>
+                                            <outlet property="date" destination="tNI-s4-R6b" id="GbJ-Rp-fLV"/>
+                                            <outlet property="excerpt" destination="kEw-fB-ME6" id="iom-vd-2L9"/>
+                                            <outlet property="thumbnail" destination="at1-pn-Ff0" id="xHR-Nf-NqN"/>
+                                            <outlet property="title" destination="kS6-It-NtK" id="msv-JX-3xx"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="wY5-Nx-WWr"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="nJH-Zi-eJT"/>
+                                </connections>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dq1-TY-CM6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="SMU Daily Campus" id="Vfc-ZZ-YRC"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uES-sM-957" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="AAx-kA-jpG"/>
+                            <constraint firstItem="dq1-TY-CM6" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Abp-7c-HqP"/>
+                            <constraint firstItem="uES-sM-957" firstAttribute="top" secondItem="dq1-TY-CM6" secondAttribute="bottom" id="TJZ-eZ-k7V"/>
+                            <constraint firstItem="dq1-TY-CM6" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="Zfe-jn-Jtt"/>
+                            <constraint firstItem="uES-sM-957" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="csz-Kf-iT9"/>
+                            <constraint firstItem="uES-sM-957" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="iTR-tU-9rP"/>
+                            <constraint firstItem="uES-sM-957" firstAttribute="top" secondItem="dq1-TY-CM6" secondAttribute="bottom" id="mob-Ub-SDF"/>
+                            <constraint firstItem="dq1-TY-CM6" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="wwU-7N-Vaf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" image="news" id="tb0-RP-pqy"/>
+                    <navigationItem key="navigationItem" title="SMU Daily Campus" id="g74-JA-5FE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="uES-sM-957" id="5Kh-UU-vAy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282.608695652174" y="-705.13392857142856"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" userLabel="Favorites" customClass="FavoritesViewController" customModule="SMUDailyCampus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4F-tn-Vvb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Favorites" id="dcO-pl-KpL"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kju-72-eWL">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FavoriteItem" id="bfe-yt-4pO" customClass="FavoriteCell" customModule="SMUDailyCampus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfe-yt-4pO" id="UuK-eg-fWL">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpJ-kB-vMq">
+                                                    <rect key="frame" x="20" y="11" width="320" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="kpJ-kB-vMq" id="h5G-g8-lax"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="84e-Hv-OGJ"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="Ngn-fa-jDt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kju-72-eWL" firstAttribute="top" secondItem="J4F-tn-Vvb" secondAttribute="bottom" id="HrS-4f-Cyi"/>
+                            <constraint firstItem="J4F-tn-Vvb" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="Wnd-ke-YMN"/>
+                            <constraint firstItem="kju-72-eWL" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="dEt-W7-Hfh"/>
+                            <constraint firstItem="J4F-tn-Vvb" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="ejC-Ob-iPM"/>
+                            <constraint firstItem="kju-72-eWL" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="i1K-3p-Ygh"/>
+                            <constraint firstItem="kju-72-eWL" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="mYH-qZ-UId"/>
+                            <constraint firstItem="J4F-tn-Vvb" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="mdR-Ru-qXH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="kju-72-eWL" id="k55-fF-7AK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282.608695652174" y="0.0"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="FM8-jl-LNt">
+            <objects>
+                <viewController id="n8e-K0-rra" userLabel="Settings" customClass="SetttingsViewController" customModule="SMUDailyCampus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Ky-T8-6IP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GW4-oP-oS7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Settings" id="HJQ-q6-Id7"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="J8o-mR-oGP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="pXH-tf-Trs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ITB-qj-JvO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1283" y="726"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="HEY-pv-rNk"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="n8e-K0-rra" kind="relationship" relationship="viewControllers" id="8VC-2m-X3B"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bookmark" width="30" height="30"/>
+        <image name="favorites" width="30" height="30"/>
+        <image name="news" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
+</document>

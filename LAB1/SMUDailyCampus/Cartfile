@@ -1,0 +1,4 @@
+github "dduan/Just"
+github "scinfu/SwiftSoup"
+github "SwifterSwift/SwifterSwift" ~> 5.0
+github "SwiftKickMobile/SwiftMessages"

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SMU Daily Campus-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-vH-dIN">
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="News" image="news" id="VM5-3U-JIG"/>
+                                    <tabBarItem title="Favorites" image="favorites" id="cR3-9R-iIW"/>
+                                    <tabBarItem title="Settings" image="settings" id="HJM-if-DQu"/>
+                                </items>
+                            </tabBar>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dA2-2v-Nj2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="SMU Daily Campus" id="sJ5-2V-k2R"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dA2-2v-Nj2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3RF-uL-vhq"/>
+                            <constraint firstItem="dA2-2v-Nj2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RcR-nx-7A9"/>
+                            <constraint firstItem="dA2-2v-Nj2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SJ3-s7-6f2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SMU Daily Campus" id="Nns-80-e49"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962.31884057971024" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="favorites" width="30" height="30"/>
+        <image name="news" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
+</document>
