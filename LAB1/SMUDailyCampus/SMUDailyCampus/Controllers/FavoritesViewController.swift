@@ -11,9 +11,11 @@ import SafariServices
 
 class FavoritesViewController: UIViewController {
     
-    var favoriteList: FavoriteList
+    private var favoriteList: FavoriteList
+    private var settingsManage: SettingsManage
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,10 +23,24 @@ class FavoritesViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.async(execute: tableView.reloadData)
+        if settingsManage.settings.titleBarDarkStyle {
+            navigationBar.barStyle = .black
+            let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+            statusBar.backgroundColor = .black
+        } else {
+            navigationBar.barStyle = .default
+            let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+            statusBar.backgroundColor = .white
+        }
+        let attrs = [
+            NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: CGFloat.init(settingsManage.settings.titleBarFontSize))
+        ]
+        navigationBar.largeTitleTextAttributes = attrs as [NSAttributedString.Key : Any]
     }
     
     required init?(coder aDecoder: NSCoder) {
         favoriteList = FavoriteList.shared
+        settingsManage = SettingsManage.shared
         super.init(coder: aDecoder)
     }
     
@@ -52,7 +68,7 @@ extension FavoritesViewController: UITableViewDelegate {
         if (tableView.cellForRow(at: indexPath) != nil) {
             if let item = favoriteList.getFavoriteItem(at: indexPath.row) {
                 let config = SFSafariViewController.Configuration()
-                config.entersReaderIfAvailable = true
+                config.entersReaderIfAvailable = settingsManage.settings.autoRenderMode
                 let vc = SFSafariViewController(url: URL.init(string: item.link)!, configuration: config)
                 present(vc, animated: true)
             }

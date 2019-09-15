@@ -26,6 +26,8 @@
 		F7BFD3A8232E1F9D00352BF2 /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BFD3A7232E1F9D00352BF2 /* FavoriteList.swift */; };
 		F7BFD3AA232E209200352BF2 /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BFD3A9232E209200352BF2 /* FavoriteItem.swift */; };
 		F7BFD3AC232E297F00352BF2 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BFD3AB232E297F00352BF2 /* FavoriteCell.swift */; };
+		F7C12CF8232EE45E00C10959 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C12CF7232EE45E00C10959 /* SettingsData.swift */; };
+		F7C12CFA232EE5D700C10959 /* SettingsManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C12CF9232EE5D700C10959 /* SettingsManage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		F7BFD3A7232E1F9D00352BF2 /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		F7BFD3A9232E209200352BF2 /* FavoriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
 		F7BFD3AB232E297F00352BF2 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		F7C12CF7232EE45E00C10959 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
+		F7C12CF9232EE5D700C10959 /* SettingsManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +118,11 @@
 			children = (
 				F78A29AA2325FB1E004B6C33 /* NewsItem.swift */,
 				F7BFD3A7232E1F9D00352BF2 /* FavoriteList.swift */,
+				F7C12CF7232EE45E00C10959 /* SettingsData.swift */,
 				F7BFD39B2325FCE300352BF2 /* NewsList.swift */,
 				F7BFD39F23260C9100352BF2 /* SMUDailyCampusClient.swift */,
 				F7BFD3A9232E209200352BF2 /* FavoriteItem.swift */,
+				F7C12CF9232EE5D700C10959 /* SettingsManage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +252,8 @@
 				F731EC662325DEB700FEF342 /* FavoritesViewController.swift in Sources */,
 				F7BFD3A8232E1F9D00352BF2 /* FavoriteList.swift in Sources */,
 				F731EC622325DEB600FEF342 /* AppDelegate.swift in Sources */,
+				F7C12CF8232EE45E00C10959 /* SettingsData.swift in Sources */,
+				F7C12CFA232EE5D700C10959 /* SettingsManage.swift in Sources */,
 				F7BFD3A4232DEA7400352BF2 /* NewsCell.swift in Sources */,
 				F7BFD3AC232E297F00352BF2 /* FavoriteCell.swift in Sources */,
 				F731EC642325DEB700FEF342 /* NewsViewController.swift in Sources */,

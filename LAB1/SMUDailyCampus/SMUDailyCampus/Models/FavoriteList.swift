@@ -67,4 +67,10 @@ class FavoriteList {
         }
     }
     
+    func clear() {
+        links.removeAll()
+        favorites.removeAll()
+        save()
+    }
+    
 }

@@ -11,25 +11,50 @@ import SafariServices
 
 class NewsViewController: UIViewController {
     
-    var newsList: NewsList
-    var favoriteList: FavoriteList
+    private var newsList: NewsList
+    private var favoriteList: FavoriteList
+    private var settingsManage: SettingsManage
     private let refreshControl = UIRefreshControl()
     private let message = MessagePrompt()
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.addTarget(self, action: #selector(refreshNews(_:)), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshNewsPuller(_:)), for: .valueChanged)
         collectionView.refreshControl = refreshControl
         if !newsList.fetch() {
             message.prompt(theme: message.error, content: "🚫 Network error", duration: 0)
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if settingsManage.settings.titleBarDarkStyle {
+            navigationBar.barStyle = .black
+            let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+            statusBar.backgroundColor = .black
+        } else {
+            navigationBar.barStyle = .default
+            let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+            statusBar.backgroundColor = .white
+        }
+        let attrs = [
+            NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: CGFloat.init(settingsManage.settings.titleBarFontSize))
+        ]
+        navigationBar.largeTitleTextAttributes = attrs as [NSAttributedString.Key : Any]
+        navigationBar.topItem?.title = settingsManage.settings.getCurrentTitle()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return settingsManage.settings.titleBarDarkStyle ? UIStatusBarStyle.lightContent : UIStatusBarStyle.default
+    }
 
     required init?(coder aDecoder: NSCoder) {
         newsList = NewsList()
         favoriteList = FavoriteList.shared
+        settingsManage = SettingsManage.shared
         super.init(coder: aDecoder)
     }
     
@@ -75,13 +100,17 @@ extension NewsViewController: UICollectionViewDataSource {
         cell.excerpt.text = item.excerpt
     }
     
-    @objc private func refreshNews(_ sender: Any) {
+    func refreshNews() {
         if newsList.refresh() {
             message.prompt(theme: message.success, content: "🎉 News updated!", duration: 1)
             collectionView.reloadData()
         }
         message.prompt(theme: message.warning, content: "👀 You’re already up-to-date!", duration: 1)
         refreshControl.endRefreshing()
+    }
+    
+    @objc private func refreshNewsPuller(_ sender: Any) {
+        refreshNews()
     }
     
 }
@@ -92,7 +121,7 @@ extension NewsViewController: UICollectionViewDelegate {
         if (collectionView.cellForItem(at: indexPath) != nil) {
             if let item = newsList.getNewsItem(at: indexPath.row) {
                 let config = SFSafariViewController.Configuration()
-                config.entersReaderIfAvailable = true
+                config.entersReaderIfAvailable = settingsManage.settings.autoRenderMode
                 let vc = SFSafariViewController(url: URL.init(string: item.link)!, configuration: config)
                 present(vc, animated: true)
             }
@@ -106,6 +135,16 @@ extension NewsViewController: UICollectionViewDelegate {
                 DispatchQueue.main.async(execute: collectionView.reloadData)
             }
         }
+    }
+    
+}
+
+extension NewsViewController: UIScrollViewDelegate {
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.navigationBar.prefersLargeTitles = (velocity.y < 0)
+        })
     }
     
 }
