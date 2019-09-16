@@ -73,6 +73,7 @@ extension FavoritesViewController: UITableViewDelegate {
             if let item = favoriteList.getFavoriteItem(at: indexPath.row) {
                 let config = SFSafariViewController.Configuration()
                 config.entersReaderIfAvailable = settingsManage.settings.autoRenderMode
+                config.barCollapsingEnabled = false
                 let vc = SFSafariViewController(url: URL.init(string: item.link)!, configuration: config)
                 present(vc, animated: true)
             }

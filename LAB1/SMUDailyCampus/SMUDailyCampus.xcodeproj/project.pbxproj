@@ -28,6 +28,7 @@
 		F7BFD3AC232E297F00352BF2 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BFD3AB232E297F00352BF2 /* FavoriteCell.swift */; };
 		F7C12CF8232EE45E00C10959 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C12CF7232EE45E00C10959 /* SettingsData.swift */; };
 		F7C12CFA232EE5D700C10959 /* SettingsManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C12CF9232EE5D700C10959 /* SettingsManage.swift */; };
+		F7C12CFC232F33A000C10959 /* SFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C12CFB232F33A000C10959 /* SFSafariViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F7BFD3AB232E297F00352BF2 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		F7C12CF7232EE45E00C10959 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		F7C12CF9232EE5D700C10959 /* SettingsManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManage.swift; sourceTree = "<group>"; };
+		F7C12CFB232F33A000C10959 /* SFSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				F731EC632325DEB700FEF342 /* NewsViewController.swift */,
 				F731EC7F2325F3AA00FEF342 /* SetttingsViewController.swift */,
 				F731EC652325DEB700FEF342 /* FavoritesViewController.swift */,
+				F7C12CFB232F33A000C10959 /* SFSafariViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				F731EC802325F3AA00FEF342 /* SetttingsViewController.swift in Sources */,
 				F78A29AB2325FB1E004B6C33 /* NewsItem.swift in Sources */,
 				F7BFD3AA232E209200352BF2 /* FavoriteItem.swift in Sources */,
+				F7C12CFC232F33A000C10959 /* SFSafariViewController.swift in Sources */,
 				F731EC662325DEB700FEF342 /* FavoritesViewController.swift in Sources */,
 				F7BFD3A8232E1F9D00352BF2 /* FavoriteList.swift in Sources */,
 				F731EC622325DEB600FEF342 /* AppDelegate.swift in Sources */,
