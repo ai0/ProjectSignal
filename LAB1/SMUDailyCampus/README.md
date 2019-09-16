@@ -40,10 +40,12 @@ The timer is implemented to update the latest news automatically. The interval o
 
 The news tab implemented the Collection View and extended the Scroll View to shrink the title bar. The thumbnail of each post utilized the Image View. The favorites tab implemented the dynamic Table View.
 
-## Screenshots
-
 ## Video
 
 ## TestFlight
 
 Invitation link: [pending]
+
+<img width="1411" src="https://user-images.githubusercontent.com/3107872/64931330-9485b880-d7fd-11e9-9dd4-80fb8c858403.png">
+
+The TestFlight build is still under review, and the link will update here once accepted.
