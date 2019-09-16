@@ -1,6 +1,9 @@
 # SMU Daily Campus
 
-A lightweight news client.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/3107872/64931269-250fc900-d7fd-11e9-91ab-6af1ae1cf392.png" />
+  A lightweight news client.
+</p>
 
 ## Features
 
