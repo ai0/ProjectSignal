@@ -42,6 +42,14 @@ The news tab implemented the Collection View and extended the Scroll View to shr
 
 ## Video
 
+<p align="center">
+  <a href="https://s2.smu.edu/~suj/course/cs7323/lab1/record.mp4">
+    <img height="360" src="https://user-images.githubusercontent.com/3107872/64932972-2397ce00-d808-11e9-8a46-57df89030099.png" />
+  </a>
+</p>
+
+> Source: [https://s2.smu.edu/~suj/course/cs7323/lab1/record.mp4](https://s2.smu.edu/~suj/course/cs7323/lab1/record.mp4)
+
 ## TestFlight
 
 Invitation link: [pending]
