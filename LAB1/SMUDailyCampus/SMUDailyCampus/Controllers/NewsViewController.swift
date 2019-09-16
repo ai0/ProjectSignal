@@ -16,6 +16,7 @@ class NewsViewController: UIViewController {
     private var settingsManage: SettingsManage
     private let refreshControl = UIRefreshControl()
     private let message = MessagePrompt()
+    private var autoRefreshTimer: Timer?
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -31,6 +32,7 @@ class NewsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setupAutoRefreshTimer()
         if settingsManage.settings.titleBarDarkStyle {
             navigationBar.barStyle = .black
             let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
@@ -100,17 +102,27 @@ extension NewsViewController: UICollectionViewDataSource {
         cell.excerpt.text = item.excerpt
     }
     
-    func refreshNews() {
+    @objc func refreshNews() {
         if newsList.refresh() {
             message.prompt(theme: message.success, content: "🎉 News updated!", duration: 1)
             collectionView.reloadData()
         }
         message.prompt(theme: message.warning, content: "👀 You’re already up-to-date!", duration: 1)
-        refreshControl.endRefreshing()
     }
     
     @objc private func refreshNewsPuller(_ sender: Any) {
         refreshNews()
+        refreshControl.endRefreshing()
+    }
+    
+    func setupAutoRefreshTimer() {
+        if autoRefreshTimer != nil {
+            autoRefreshTimer?.invalidate()
+        }
+        let refreshInterval = settingsManage.settings.autoRefreshInterval
+        if refreshInterval > 0 {
+            autoRefreshTimer = Timer.scheduledTimer(timeInterval: refreshInterval, target: self, selector: #selector(refreshNews), userInfo: nil, repeats: true)
+        }
     }
     
 }

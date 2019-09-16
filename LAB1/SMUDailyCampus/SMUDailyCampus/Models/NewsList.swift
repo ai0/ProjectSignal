@@ -83,7 +83,6 @@ class NewsList {
             var checkpoint = 0
             for parsedNewsItem in parsedNews {
                 if parsedNewsItem.link == currentFirstNewsLink {
-                    print("break")
                     break
                 }
                 checkpoint += 1

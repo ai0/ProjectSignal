@@ -36,5 +36,10 @@ class SettingsManage {
         }
     }
     
+    func reset() {
+        settings =  SettingsData()
+        save()
+    }
+    
 }
 

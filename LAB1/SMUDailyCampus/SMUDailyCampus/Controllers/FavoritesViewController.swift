@@ -38,6 +38,10 @@ class FavoritesViewController: UIViewController {
         navigationBar.largeTitleTextAttributes = attrs as [NSAttributedString.Key : Any]
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return settingsManage.settings.titleBarDarkStyle ? UIStatusBarStyle.lightContent : UIStatusBarStyle.default
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         favoriteList = FavoriteList.shared
         settingsManage = SettingsManage.shared

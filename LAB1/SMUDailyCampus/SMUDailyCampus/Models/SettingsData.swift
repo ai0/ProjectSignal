@@ -13,6 +13,7 @@ class SettingsData: NSObject, NSCoding {
     var autoRenderMode: Bool
     var titleBarDarkStyle: Bool
     var titleBarFontSize: Double
+    var autoRefreshInterval: Double
     var titleIndex: Int
     let titleChoices = [
         "SMU Daily Campus",
@@ -21,10 +22,11 @@ class SettingsData: NSObject, NSCoding {
         "SMU Daily"
     ]
     
-    init(autoRenderMode: Bool = true, titleBarDarkStyle: Bool = false, titleBarFontSize: Double = 32, titleIndex: Int = 0) {
+    init(autoRenderMode: Bool = true, titleBarDarkStyle: Bool = false, titleBarFontSize: Double = 32, autoRefreshInterval: Double = 10, titleIndex: Int = 0) {
         self.autoRenderMode = autoRenderMode
         self.titleBarDarkStyle = titleBarDarkStyle
         self.titleBarFontSize = titleBarFontSize
+        self.autoRefreshInterval = autoRefreshInterval
         self.titleIndex = titleIndex
     }
     
@@ -32,6 +34,7 @@ class SettingsData: NSObject, NSCoding {
         self.autoRenderMode = decoder.decodeBool(forKey: "autoRenderMode")
         self.titleBarDarkStyle = decoder.decodeBool(forKey: "titleBarDarkStyle")
         self.titleBarFontSize = decoder.decodeDouble(forKey: "titleBarFontSize")
+        self.autoRefreshInterval = decoder.decodeDouble(forKey: "autoRefreshInterval")
         self.titleIndex = decoder.decodeInteger(forKey: "titleIndex")
     }
     
@@ -39,6 +42,7 @@ class SettingsData: NSObject, NSCoding {
         coder.encode(autoRenderMode, forKey: "autoRenderMode")
         coder.encode(titleBarDarkStyle, forKey: "titleBarDarkStyle")
         coder.encode(titleBarFontSize, forKey: "titleBarFontSize")
+        coder.encode(autoRefreshInterval, forKey: "autoRefreshInterval")
         coder.encode(titleIndex, forKey: "titleIndex")
     }
     

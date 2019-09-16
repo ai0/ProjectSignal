@@ -354,12 +354,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="ydS-jD-CDa">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="60" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydS-jD-CDa">
                                                     <rect key="frame" x="278" y="15" width="118" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="762-RV-Qw2"/>
                                                         <constraint firstAttribute="width" constant="114" id="gt7-zi-c8f"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="autoRefreshIntervalIsChanged:" destination="Hdn-46-Mae" eventType="valueChanged" id="gGa-NI-1H8"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <constraints>
@@ -406,20 +409,43 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecO-1U-qFg">
-                                                    <rect key="frame" x="156" y="7" width="102" height="30"/>
+                                                    <rect key="frame" x="157" y="7" width="100" height="30"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                    <state key="normal" title="Clear Favorites">
-                                                        <color key="titleColor" red="0.90710800886154175" green="0.29899710416793823" blue="0.23585259914398193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Reset Defaults">
+                                                        <color key="titleColor" red="0.20326057080000001" green="0.59547084569999997" blue="0.85841131209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="clearFavorites:" destination="SOd-aV-NYf" eventType="touchUpInside" id="26P-3N-X2A"/>
-                                                        <action selector="clearFavorites:" destination="Hdn-46-Mae" eventType="touchUpInside" id="ZqW-co-mx3"/>
+                                                        <action selector="resetDefaults:" destination="Hdn-46-Mae" eventType="touchUpInside" id="5XU-ck-bZY"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ecO-1U-qFg" firstAttribute="centerY" secondItem="fwJ-ch-da6" secondAttribute="centerY" id="uUv-aY-oXX"/>
                                                 <constraint firstItem="ecO-1U-qFg" firstAttribute="centerX" secondItem="fwJ-ch-da6" secondAttribute="centerX" id="vzg-Qp-yJx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2r7-wz-6ZD">
+                                        <rect key="frame" x="0.0" y="431.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2r7-wz-6ZD" id="NwV-6f-eFl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VzX-Jm-zFm">
+                                                    <rect key="frame" x="156" y="7" width="102" height="30"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                    <state key="normal" title="Clear Favorites">
+                                                        <color key="titleColor" red="0.90710800889999998" green="0.29899710419999997" blue="0.2358525991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="clearFavorites:" destination="Hdn-46-Mae" eventType="touchUpInside" id="IdQ-Bi-tgX"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VzX-Jm-zFm" firstAttribute="centerX" secondItem="NwV-6f-eFl" secondAttribute="centerX" id="Bsw-dM-R5i"/>
+                                                <constraint firstItem="VzX-Jm-zFm" firstAttribute="centerY" secondItem="NwV-6f-eFl" secondAttribute="centerY" id="cLm-4g-XQN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -433,6 +459,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="Tjr-In-n71"/>
                     <connections>
+                        <outlet property="autoRefreshIntervalSlider" destination="ydS-jD-CDa" id="y8X-Xn-XN6"/>
                         <outlet property="autoRenderModeSwitch" destination="KQY-j7-bbV" id="8w1-iR-yBt"/>
                         <outlet property="titleBarDarkStyleSeg" destination="nQO-oI-Hle" id="cea-09-8G4"/>
                         <outlet property="titleBarFontSizeStepper" destination="G4u-SP-d7u" id="9ah-gK-dyC"/>
@@ -440,7 +467,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IE-ys-zah" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="SOd-aV-NYf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2173.913043478261" y="728.57142857142856"/>
         </scene>

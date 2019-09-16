@@ -18,8 +18,7 @@ class SetttingsViewController: UITableViewController, UIPickerViewDataSource, UI
     @IBOutlet weak var autoRenderModeSwitch: UISwitch!
     @IBOutlet weak var titleBarDarkStyleSeg: UISegmentedControl!
     @IBOutlet weak var titleBarFontSizeStepper: UIStepper!
-    
-
+    @IBOutlet weak var autoRefreshIntervalSlider: UISlider!
     @IBOutlet weak var titlePicker: UIPickerView!
     
     @IBAction func autoRenderModeIsChanged(_ sender: UISwitch) {
@@ -48,18 +47,27 @@ class SetttingsViewController: UITableViewController, UIPickerViewDataSource, UI
     @IBAction func titleBarFontSizeIsChanged(_ sender: UIStepper) {
         let fontSize = sender.value
         settingsManage.settings.titleBarFontSize = fontSize
-        message.prompt(theme: message.success, content: "✅ Title bar font size changed to \(fontSize).", duration: 0.1)
+        message.prompt(theme: message.success, content: "✅ Title bar font size changed to \(fontSize).", duration: 0.2)
         updateTitleBarFontSize()
+        settingsManage.save()
+    }
+    
+    @IBAction func autoRefreshIntervalIsChanged(_ sender: UISlider) {
+        let autoRefreshInterval = Int(sender.value)
+        settingsManage.settings.autoRefreshInterval = Double(autoRefreshInterval)
+        if autoRefreshInterval > 0 {
+            message.prompt(theme: message.success, content: "✅ Auto refresh interval changed to \(autoRefreshInterval).", duration: 1)
+        } else {
+            message.prompt(theme: message.info, content: "ℹ️ Auto refresh timer disabled.", duration: 1)
+        }
         settingsManage.save()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.autoRenderModeSwitch.setOn(settingsManage.settings.autoRenderMode, animated: false)
-        self.titleBarDarkStyleSeg.selectedSegmentIndex = settingsManage.settings.titleBarDarkStyle ? 1: 0
         self.titlePicker.delegate = self
         self.titlePicker.dataSource = self
-        self.titlePicker.selectRow(settingsManage.settings.titleIndex, inComponent: 0, animated: false)
+        loadSettings()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,6 +79,18 @@ class SetttingsViewController: UITableViewController, UIPickerViewDataSource, UI
         favoriteList = FavoriteList.shared
         settingsManage = SettingsManage.shared
         super.init(coder: aDecoder)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return settingsManage.settings.titleBarDarkStyle ? UIStatusBarStyle.lightContent : UIStatusBarStyle.default
+    }
+    
+    func loadSettings() {
+        self.autoRenderModeSwitch.setOn(settingsManage.settings.autoRenderMode, animated: false)
+        self.titleBarDarkStyleSeg.selectedSegmentIndex = settingsManage.settings.titleBarDarkStyle ? 1: 0
+        self.titleBarFontSizeStepper.value = settingsManage.settings.titleBarFontSize
+        self.autoRefreshIntervalSlider.value = Float(settingsManage.settings.autoRefreshInterval)
+        self.titlePicker.selectRow(settingsManage.settings.titleIndex, inComponent: 0, animated: false)
     }
     
     func updateTitleBarStyle() {
@@ -108,6 +128,12 @@ class SetttingsViewController: UITableViewController, UIPickerViewDataSource, UI
         settingsManage.settings.titleIndex = row
         settingsManage.save()
         message.prompt(theme: message.success, content: "✅ Homepage title updated.", duration: 1)
+    }
+    
+    @IBAction func resetDefaults(_ sender: Any) {
+        settingsManage.reset()
+        loadSettings()
+        message.prompt(theme: message.success, content: "✅ All settings reset to default value.", duration: 1)
     }
     
     @IBAction func clearFavorites(_ sender: Any) {
