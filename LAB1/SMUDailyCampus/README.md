@@ -52,8 +52,10 @@ The news tab implemented the Collection View and extended the Scroll View to shr
 
 ## TestFlight
 
-Invitation link: [pending]
+Invitation link: [https://testflight.apple.com/join/Mv13qjkL](https://testflight.apple.com/join/Mv13qjkL)
 
 <img width="1411" src="https://user-images.githubusercontent.com/3107872/64931330-9485b880-d7fd-11e9-9dd4-80fb8c858403.png">
 
-The TestFlight build is still under review, and the link will update here once accepted.
+~~The TestFlight build is still under review, and the link will update here once accepted.~~
+
+**Update:** TestFlight invitation link updated.
