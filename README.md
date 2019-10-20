@@ -13,3 +13,4 @@
 
 - [Lab1 - Sink or Swim iOS Interface Building](/LAB1/SMUDailyCampus)
 - [Lab2 - Audio Filtering, the FFT, and Doppler Shifts](/LAB2/AudioLab)
+- [Lab3 - Core Motion and SpriteKit](/LAB3/Devoured)
