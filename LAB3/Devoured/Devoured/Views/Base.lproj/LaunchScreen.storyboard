@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1z-kE-pv0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Dashboard" largeTitleDisplayMode="always" id="fcO-WJ-fxJ"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iU1-fR-UXx">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cJ-vX-CK7">
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Dashboard" image="dashboard" id="c8y-zk-5cP"/>
+                                    <tabBarItem title="Goal" image="goal" id="3dS-72-MWw"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iU1-fR-UXx" firstAttribute="top" secondItem="Z1z-kE-pv0" secondAttribute="bottom" id="1gA-pR-H5T"/>
+                            <constraint firstItem="iU1-fR-UXx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5xe-DF-crb"/>
+                            <constraint firstItem="0cJ-vX-CK7" firstAttribute="top" secondItem="iU1-fR-UXx" secondAttribute="bottom" id="CzX-LK-qxm"/>
+                            <constraint firstItem="0cJ-vX-CK7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DJI-HS-XEo"/>
+                            <constraint firstItem="Z1z-kE-pv0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FEl-tM-Syb"/>
+                            <constraint firstItem="iU1-fR-UXx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RHb-zF-ei0"/>
+                            <constraint firstItem="0cJ-vX-CK7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TcF-qi-bYe"/>
+                            <constraint firstItem="Z1z-kE-pv0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bbz-yI-lkN"/>
+                            <constraint firstAttribute="bottom" secondItem="0cJ-vX-CK7" secondAttribute="bottom" id="gcd-NO-vKF"/>
+                            <constraint firstItem="0cJ-vX-CK7" firstAttribute="top" secondItem="iU1-fR-UXx" secondAttribute="bottom" id="idG-Qd-4WK"/>
+                            <constraint firstItem="Z1z-kE-pv0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nNI-K0-yJD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dashboard" width="30" height="30"/>
+        <image name="goal" width="30" height="30"/>
+    </resources>
+</document>
