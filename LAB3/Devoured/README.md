@@ -27,3 +27,7 @@
 </p>
 
 > Source: [https://s2.smu.edu/~suj/course/cs7323/lab3/record.mp4](https://s2.smu.edu/~suj/course/cs7323/lab3/record.mp4)
+
+## TestFlight
+
+Invitation link: [https://testflight.apple.com/join/LaHRCtqO](https://testflight.apple.com/join/LaHRCtqO)
