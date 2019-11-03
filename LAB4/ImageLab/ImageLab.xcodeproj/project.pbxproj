@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F72691C1236D0B63005E719D /* VideoAnalgesic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72691BB236D0B62005E719D /* VideoAnalgesic.swift */; };
+		F72691C3236D0B63005E719D /* OpenCVBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = F72691BD236D0B62005E719D /* OpenCVBridge.mm */; };
+		F72691C4236D0B63005E719D /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72691BE236D0B62005E719D /* opencv2.framework */; };
+		F72691C9236D1366005E719D /* OpenCVPPGBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = F72691C8236D1366005E719D /* OpenCVPPGBridge.mm */; };
+		F731B75423639CF600135ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B75323639CF600135ECA /* AppDelegate.swift */; };
+		F731B75823639CF600135ECA /* ModuleAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B75723639CF600135ECA /* ModuleAViewController.swift */; };
+		F731B75A23639CF600135ECA /* ModuleBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F731B75923639CF600135ECA /* ModuleBViewController.swift */; };
+		F731B75D23639CF600135ECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F731B75B23639CF600135ECA /* Main.storyboard */; };
+		F731B75F23639CF700135ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F731B75E23639CF700135ECA /* Assets.xcassets */; };
+		F731B76223639CF700135ECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F731B76023639CF700135ECA /* LaunchScreen.storyboard */; };
+		F7D65B19236E21290025A133 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D65B18236E21290025A133 /* Charts.framework */; };
+		F7D65B1A236E21290025A133 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7D65B18236E21290025A133 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7D65B1B236E21290025A133 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7D65B1A236E21290025A133 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F72691BB236D0B62005E719D /* VideoAnalgesic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAnalgesic.swift; sourceTree = "<group>"; };
+		F72691BD236D0B62005E719D /* OpenCVBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVBridge.mm; sourceTree = "<group>"; };
+		F72691BE236D0B62005E719D /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		F72691BF236D0B62005E719D /* OpenCVBridge.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OpenCVBridge.hh; sourceTree = "<group>"; };
+		F72691C0236D0B62005E719D /* CoreImageOpenCVExample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreImageOpenCVExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		F72691C6236D0C14005E719D /* ImageLab-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageLab-Bridging-Header.h"; sourceTree = "<group>"; };
+		F72691C7236D0D0C005E719D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F72691C8236D1366005E719D /* OpenCVPPGBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVPPGBridge.mm; sourceTree = "<group>"; };
+		F72691CA236D1374005E719D /* OpenCVPPGBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVPPGBridge.h; sourceTree = "<group>"; };
+		F731B75023639CF600135ECA /* Image Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F731B75323639CF600135ECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F731B75723639CF600135ECA /* ModuleAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleAViewController.swift; sourceTree = "<group>"; };
+		F731B75923639CF600135ECA /* ModuleBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBViewController.swift; sourceTree = "<group>"; };
+		F731B75C23639CF600135ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F731B75E23639CF700135ECA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F731B76123639CF700135ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F731B76323639CF700135ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D65B18236E21290025A133 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F731B74D23639CF600135ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72691C4236D0B63005E719D /* opencv2.framework in Frameworks */,
+				F7D65B19236E21290025A133 /* Charts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F72691B9236D0B0D005E719D /* ImageDSPUtils */ = {
+			isa = PBXGroup;
+			children = (
+				F72691C0236D0B62005E719D /* CoreImageOpenCVExample-Bridging-Header.h */,
+				F72691BE236D0B62005E719D /* opencv2.framework */,
+				F72691BF236D0B62005E719D /* OpenCVBridge.hh */,
+				F72691BD236D0B62005E719D /* OpenCVBridge.mm */,
+				F72691C6236D0C14005E719D /* ImageLab-Bridging-Header.h */,
+				F72691C7236D0D0C005E719D /* PrefixHeader.pch */,
+				F72691BB236D0B62005E719D /* VideoAnalgesic.swift */,
+			);
+			path = ImageDSPUtils;
+			sourceTree = "<group>";
+		};
+		F731B74723639CF600135ECA = {
+			isa = PBXGroup;
+			children = (
+				F731B75223639CF600135ECA /* ImageLab */,
+				F731B75123639CF600135ECA /* Products */,
+				F7D65B17236E21290025A133 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F731B75123639CF600135ECA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F731B75023639CF600135ECA /* Image Lab.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F731B75223639CF600135ECA /* ImageLab */ = {
+			isa = PBXGroup;
+			children = (
+				F731B76D23639DD000135ECA /* Frameworks */,
+				F731B76C23639DBB00135ECA /* Views */,
+				F731B76B23639DB500135ECA /* Resources */,
+				F731B76A23639DAE00135ECA /* Models */,
+				F731B76923639DA700135ECA /* Controllers */,
+				F731B75323639CF600135ECA /* AppDelegate.swift */,
+			);
+			path = ImageLab;
+			sourceTree = "<group>";
+		};
+		F731B76923639DA700135ECA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F731B75723639CF600135ECA /* ModuleAViewController.swift */,
+				F731B75923639CF600135ECA /* ModuleBViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F731B76A23639DAE00135ECA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F72691C8236D1366005E719D /* OpenCVPPGBridge.mm */,
+				F72691CA236D1374005E719D /* OpenCVPPGBridge.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F731B76B23639DB500135ECA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F731B75E23639CF700135ECA /* Assets.xcassets */,
+				F731B76323639CF700135ECA /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F731B76C23639DBB00135ECA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F731B75B23639CF600135ECA /* Main.storyboard */,
+				F731B76023639CF700135ECA /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F731B76D23639DD000135ECA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F72691B9236D0B0D005E719D /* ImageDSPUtils */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7D65B17236E21290025A133 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7D65B18236E21290025A133 /* Charts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F731B74F23639CF600135ECA /* ImageLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F731B76623639CF700135ECA /* Build configuration list for PBXNativeTarget "ImageLab" */;
+			buildPhases = (
+				F731B74C23639CF600135ECA /* Sources */,
+				F731B74D23639CF600135ECA /* Frameworks */,
+				F731B74E23639CF600135ECA /* Resources */,
+				F7D65B1B236E21290025A133 /* Embed Frameworks */,
+				F7D65B1C236E6A110025A133 /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageLab;
+			productName = ImageLab;
+			productReference = F731B75023639CF600135ECA /* Image Lab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F731B74823639CF600135ECA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Jing Su";
+				TargetAttributes = {
+					F731B74F23639CF600135ECA = {
+						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = F731B74B23639CF600135ECA /* Build configuration list for PBXProject "ImageLab" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F731B74723639CF600135ECA;
+			productRefGroup = F731B75123639CF600135ECA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F731B74F23639CF600135ECA /* ImageLab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F731B74E23639CF600135ECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F731B76223639CF700135ECA /* LaunchScreen.storyboard in Resources */,
+				F731B75F23639CF700135ECA /* Assets.xcassets in Resources */,
+				F731B75D23639CF600135ECA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F7D65B1C236E6A110025A133 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F731B74C23639CF600135ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F731B75A23639CF600135ECA /* ModuleBViewController.swift in Sources */,
+				F72691C1236D0B63005E719D /* VideoAnalgesic.swift in Sources */,
+				F72691C3236D0B63005E719D /* OpenCVBridge.mm in Sources */,
+				F72691C9236D1366005E719D /* OpenCVPPGBridge.mm in Sources */,
+				F731B75823639CF600135ECA /* ModuleAViewController.swift in Sources */,
+				F731B75423639CF600135ECA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F731B75B23639CF600135ECA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F731B75C23639CF600135ECA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F731B76023639CF700135ECA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F731B76123639CF700135ECA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F731B76423639CF700135ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F731B76523639CF700135ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F731B76723639CF700135ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDJ2Y3598J;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImageLab/Frameworks/ImageDSPUtils",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ImageLab/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = su.jing.ImageLab;
+				PRODUCT_NAME = "Image Lab";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageLab/Frameworks/ImageDSPUtils/ImageLab-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F731B76823639CF700135ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDJ2Y3598J;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImageLab/Frameworks/ImageDSPUtils",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ImageLab/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = su.jing.ImageLab;
+				PRODUCT_NAME = "Image Lab";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageLab/Frameworks/ImageDSPUtils/ImageLab-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F731B74B23639CF600135ECA /* Build configuration list for PBXProject "ImageLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F731B76423639CF700135ECA /* Debug */,
+				F731B76523639CF700135ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F731B76623639CF700135ECA /* Build configuration list for PBXNativeTarget "ImageLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F731B76723639CF700135ECA /* Debug */,
+				F731B76823639CF700135ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F731B74823639CF600135ECA /* Project object */;
+}
