@@ -1,0 +1,17 @@
+version: "3"
+services:
+  web:
+    build: .
+    command: ["wait-for-it", "db:27017", "--", "python", "-u", "app.py"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/opt/app
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+    image: mongo:3.6.15
+    volumes:
+      - ./mongo_data:/data/db
