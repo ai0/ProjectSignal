@@ -15,3 +15,4 @@
 - [Lab2 - Audio Filtering, the FFT, and Doppler Shifts](/LAB2/AudioLab)
 - [Lab3 - Core Motion and SpriteKit](/LAB3/Devoured)
 - [Lab4 - Core Image and OpenCV](/LAB4/ImageLab)
+- [Lab5 - Machine Learning as a Service](/LAB5/AgeRadar)
