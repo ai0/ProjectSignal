@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scene-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="SceneViewController" customModule="Illusory_Beacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZr-8e-gO6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <subviews>
+                                    <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiV-LZ-sCo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                    </arscnView>
+                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEP-KR-dDj">
+                                        <rect key="frame" x="342" y="669" width="64" height="64"/>
+                                        <state key="normal" image="map"/>
+                                        <connections>
+                                            <action selector="locationDetail:" destination="9pv-A4-QxB" eventType="touchUpInside" id="JzI-Rc-mcH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIg-9b-tjc">
+                                        <rect key="frame" x="342" y="741" width="64" height="64"/>
+                                        <state key="normal" image="post"/>
+                                        <connections>
+                                            <action selector="postItem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="trK-Me-EK7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua4-Lh-3qp">
+                                        <rect key="frame" x="8" y="741" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="VeM-Ks-qly"/>
+                                        </constraints>
+                                        <state key="normal" image="unlock"/>
+                                        <connections>
+                                            <action selector="lockLocation:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Vaj-do-7Hf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX5-ex-klL">
+                                        <rect key="frame" x="80" y="762" width="254" height="22"/>
+                                        <color key="backgroundColor" red="0.3411764706" green="0.8980392157" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqr-8z-aCb">
+                                        <rect key="frame" x="8" y="669" width="64" height="64"/>
+                                        <state key="normal" image="refresh"/>
+                                        <connections>
+                                            <action selector="refreshScene:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YE6-Gb-LdM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KiV-LZ-sCo" secondAttribute="trailing" id="33g-jk-Qn8"/>
+                                    <constraint firstItem="lX5-ex-klL" firstAttribute="centerX" secondItem="KiV-LZ-sCo" secondAttribute="centerX" id="6je-Vb-QMq"/>
+                                    <constraint firstItem="KIg-9b-tjc" firstAttribute="top" secondItem="Ua4-Lh-3qp" secondAttribute="top" id="ABg-n9-Rtd"/>
+                                    <constraint firstItem="jqr-8z-aCb" firstAttribute="leading" secondItem="Ua4-Lh-3qp" secondAttribute="leading" id="HLI-cb-Uvm"/>
+                                    <constraint firstAttribute="bottom" secondItem="KiV-LZ-sCo" secondAttribute="bottom" id="KNV-xx-BBj"/>
+                                    <constraint firstItem="lX5-ex-klL" firstAttribute="centerY" secondItem="Ua4-Lh-3qp" secondAttribute="centerY" id="P96-rR-vwO"/>
+                                    <constraint firstItem="lX5-ex-klL" firstAttribute="leading" secondItem="Ua4-Lh-3qp" secondAttribute="trailing" constant="8" id="ScT-tW-HKs"/>
+                                    <constraint firstItem="KIg-9b-tjc" firstAttribute="bottom" secondItem="WZr-8e-gO6" secondAttribute="bottomMargin" id="abo-VU-KsR"/>
+                                    <constraint firstItem="lX5-ex-klL" firstAttribute="centerX" secondItem="WZr-8e-gO6" secondAttribute="centerX" id="bUc-oo-4US"/>
+                                    <constraint firstItem="Ua4-Lh-3qp" firstAttribute="top" secondItem="jqr-8z-aCb" secondAttribute="bottom" constant="8" id="fym-Ub-MKq"/>
+                                    <constraint firstItem="KiV-LZ-sCo" firstAttribute="leading" secondItem="WZr-8e-gO6" secondAttribute="leading" id="mo3-Gm-9hu"/>
+                                    <constraint firstItem="KEP-KR-dDj" firstAttribute="leading" secondItem="KIg-9b-tjc" secondAttribute="leading" id="nt3-tk-QsL"/>
+                                    <constraint firstItem="KiV-LZ-sCo" firstAttribute="top" secondItem="WZr-8e-gO6" secondAttribute="top" id="s0u-Uw-qG0"/>
+                                    <constraint firstItem="Ua4-Lh-3qp" firstAttribute="leading" secondItem="WZr-8e-gO6" secondAttribute="leadingMargin" id="tmb-gJ-0pY"/>
+                                    <constraint firstItem="KEP-KR-dDj" firstAttribute="trailing" secondItem="WZr-8e-gO6" secondAttribute="trailingMargin" id="wvE-4e-er5"/>
+                                    <constraint firstItem="jqr-8z-aCb" firstAttribute="top" secondItem="KEP-KR-dDj" secondAttribute="top" id="yMb-ea-FjR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WZr-8e-gO6" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Hbd-f8-pPs"/>
+                            <constraint firstItem="WZr-8e-gO6" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="UhB-id-Nim"/>
+                            <constraint firstItem="WZr-8e-gO6" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="YZT-jD-rvp"/>
+                            <constraint firstItem="WZr-8e-gO6" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="teq-mz-ev5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scene" image="scene-inactive" selectedImage="scene-active" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="locationIndicator" destination="lX5-ex-klL" id="AuO-q1-ln3"/>
+                        <outlet property="sceneView" destination="KiV-LZ-sCo" id="Moe-bx-62H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="yux-eH-tc5">
+            <objects>
+                <hostingController id="Y5d-IE-Eem" customClass="ProfileViewController" customModule="Illusory_Beacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-inactive" selectedImage="profile-active" id="2IB-Fz-0Gs"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMC-aA-rnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="376"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBar" id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="selectedImageTintColor" red="0.3411764705882353" green="0.89803921568627454" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="Y5d-IE-Eem" kind="relationship" relationship="viewControllers" id="ZSE-kQ-Veq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" width="64" height="64"/>
+        <image name="post" width="64" height="64"/>
+        <image name="profile-active" width="30" height="30"/>
+        <image name="profile-inactive" width="30" height="30"/>
+        <image name="refresh" width="64" height="64"/>
+        <image name="scene-active" width="30" height="30"/>
+        <image name="scene-inactive" width="30" height="30"/>
+        <image name="unlock" width="64" height="64"/>
+    </resources>
+</document>

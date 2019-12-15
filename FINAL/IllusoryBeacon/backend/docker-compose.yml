@@ -1,0 +1,27 @@
+version: "3"
+services:
+  web:
+    build: .
+    command: ["wait-for-it", "db:5432", "--", "python", "-u", "run.py", "--debug"] # remove debug parameter when deploy to prod
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/opt/app
+      - ./imgaes:/var/data/images
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+    image: postgres:12.1
+    restart: always
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: beacon
+      POSTGRES_PASSWORD: 1llus0ryBe4c0n
+      POSTGRES_DB: illusorybeacon
+    ports:
+      - "5432:5432" # dev
+      # - "5432" # prod
