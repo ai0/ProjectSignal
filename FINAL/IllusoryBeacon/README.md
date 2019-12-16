@@ -69,6 +69,10 @@ docker-compose up -d
 
 > Source: [https://s2.smu.edu/~suj/course/cs7323/final/record.mp4](https://s2.smu.edu/~suj/course/cs7323/final/record.mp4)
 
+## Keynote
+
+[IllusoryBeacon.key](https://s2.smu.edu/~suj/course/cs7323/final/IllusoryBeacon.key)
+
 ## TestFlight
 
 Invitation link: [https://testflight.apple.com/join/pfeMVi8W](https://testflight.apple.com/join/pfeMVi8W)
