@@ -59,3 +59,16 @@ docker-compose build
 docker-compose up -d
 ```
 
+## Video
+
+<p align="center">
+  <a href="https://s2.smu.edu/~suj/course/cs7323/final/record.mp4">
+    <img height="360" src="https://user-images.githubusercontent.com/3107872/70872526-6768b380-1f6e-11ea-98ce-8a3172afdd44.png" />
+  </a>
+</p>
+
+> Source: [https://s2.smu.edu/~suj/course/cs7323/final/record.mp4](https://s2.smu.edu/~suj/course/cs7323/final/record.mp4)
+
+## TestFlight
+
+Invitation link: [https://testflight.apple.com/join/pfeMVi8W](https://testflight.apple.com/join/pfeMVi8W)
