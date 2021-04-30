@@ -26,6 +26,6 @@ sanic-session==0.5.6
 tortoise-orm==0.15.5
 typing-extensions==3.7.4.1
 ujson==1.35
-urllib3==1.25.7
+urllib3==1.25.8
 uvloop==0.14.0
 websockets==8.1
